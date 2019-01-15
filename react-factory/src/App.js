@@ -5,16 +5,15 @@ import { getComponent } from './ComponentFactory';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    console.log(appData());
-    this.state = { component: appData() };
+    this.state = { component: appData(props.user) };
   }
   render() {
     var components = [];
-    console.log(this.state);
-    components.push(getComponent(this.state.component));
-
-    console.log(components);
-
+    if (this.state.component) {
+      components.push(getComponent(this.state.component));
+    } else {
+      components.push(<p>No Such User exists, please check the documentation.</p>);
+    }
     return components;
   }
 }
