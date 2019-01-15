@@ -1,12 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { appData } from './Data';
+import { getComponent } from './ComponentFactory';
 
-class App extends Component {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log(appData());
+    this.state = { component: appData() };
+  }
   render() {
-    return (
-      <div>
-        Hello World
-      </div>
-    );
+    var components = [];
+    console.log(this.state);
+    components.push(getComponent(this.state.component));
+
+    console.log(components);
+
+    return components;
   }
 }
 
