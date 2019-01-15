@@ -13,7 +13,7 @@ Basic knowledge of ReactJS Library is required to use this solution.
 Pure ReactJS
 
 ## How to approach
-Start from index.js and follow along. The project is not very complex and does not have a lot of components to work with.
+Start from index.js and follow along. The project is not very complex and does not have a lot of components to work with. src/data.js holds all the data for the application.
 
 ## Improvements
 We are open to suggestions, if you have some better idea in your mind, please let us know.
